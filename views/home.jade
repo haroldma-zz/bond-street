@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1 Sample step-by-step form
+  p.lead An app for Bond Street.
+  hr
+  .row
+    each form in forms
+      .col-sm-6
+        h2 #{form.name}
+        p #{form.description}
+        p
+          - var link = '/login'
+          - var text = 'Start'
+          if user
+            - isCurrentForm = user.currentStep._form ? user.currentStep._form.equals(form._id) : false;
+            - link = isCurrentForm ? '/steps' : '/steps/start/' + form._id
+            - text = isCurrentForm ? 'Continue' : text
+          a.btn.btn-default(href=link, role='button') #{text} »

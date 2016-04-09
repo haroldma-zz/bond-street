@@ -1,0 +1,6 @@
+extends ../layout
+
+block content
+  h1 #{name}
+  h3 Step ##{currentStep}
+  a.btn.btn-primary.btn-lg(href='/steps/' + currentStep+ '/next') Next!
