@@ -17,3 +17,4 @@
 2. NoSQL is a great option for the type of data being worked with.
 3. Saving the user's current step in the user schema
 4. There can be various forms, with n amounts of steps, but the app keeps track of only one per user.
+5. MVC structure
